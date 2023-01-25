@@ -54,7 +54,7 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
         </button>)} */}
 
       {/* PokemonsPerPage */}
-      {/* {pokemonsPaginatedButton} */}
+      {pokemonsPaginatedButton}
 
     </div>
 

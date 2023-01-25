@@ -73,3 +73,66 @@ body {
   color: var(--color--text);
   margin-top: 5%;
 }
+
+
+/* selection per Page */
+
+.div__selectionPerPage{
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  position: fixed;
+  flex-direction: column;
+}
+
+
+
+.div__img--selectionPerPage{
+  width: 10%;
+
+}
+
+.div__div--selectionPerPage{
+  display: none;
+  transition: all 1s;
+}
+
+.div__selectionPerPage:hover 
+.div__img--selectionPerPage{
+  width: 10%;
+  display:none;
+}
+
+.div__selectionPerPage:hover 
+.div__div--selectionPerPage{
+  display: block;
+}
+
+
+.div__div--buttonSelectionPerPage{
+  display: none;
+  border: none;
+  background-color: var(--color--third);
+  border-radius: 50%;
+  font-size: 1,5rem;
+  padding: 1rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  margin: 5%;
+}
+
+.div__div--buttonSelectionPerPage:hover{
+cursor: pointer;
+background-color: var(--color-secondary);
+transform: scale(110%);
+transition: all 1s;
+}
+
+
+
+
