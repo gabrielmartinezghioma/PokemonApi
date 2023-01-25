@@ -74,19 +74,37 @@ body {
   margin-top: 5%;
 }
 
+/* ButtonIncreaseDecrease */
+
+.div__div--divPokemons, .div--paginated{
+  display: flex;
+  width: 100%;
+  margin: 2% 0;
+}
+
+.div__div--paginated{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
 
 /* selection per Page */
+
+.div--paginated{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .div__selectionPerPage{
   display: flex;
   position: absolute;
-  bottom: 40px;
+  bottom: 20%;
   left: 20px;
   position: fixed;
   flex-direction: column;
 }
-
-
 
 .div__img--selectionPerPage{
   width: 10%;
@@ -133,6 +151,46 @@ transform: scale(110%);
 transition: all 1s;
 }
 
+.div__div--buttonPaginated{
+  background-color: var( --color-secondary);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 2% auto;
+  margin: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.div__div--buttonPaginated:active{
+  opacity: 0.2;
+  transform: scale(90%);
+  transition: all 1s;
+}
+
+.div__div--buttonNumber{
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.div__div--buttonNumber:hover{
+  color: var(--color-secondary);
+}
+
+.div__div--paginatedNumbers{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  width: 30%;
+  position: absolute;
+  overflow: hidden;
+ 
+}
 
 
 

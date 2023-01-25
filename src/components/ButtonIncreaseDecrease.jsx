@@ -33,6 +33,7 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
       <div className='div__div--paginated'>
         {/* Decrease */}
         <button
+        className='div__div--buttonPaginated'
           onClick={() => (functionPagesPrev())}
           disabled={numberPage === 1}
         >
@@ -41,6 +42,7 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
 
         {/* Increse */}
         <button
+         className='div__div--buttonPaginated'
           onClick={() => (functionPagesNext())}
           disabled={totalPages === numberPage}
         >
@@ -48,10 +50,15 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
         </button>
       </div>
       {/* Goes to the page number */}
-      {/* {pagesNumbers?.map((number, index) =>
-        <button onClick={() => pagesOfNumber(number)} key={index}>
+      <div  className='div__div--paginatedNumbers'>
+        {pagesNumbers?.map((number, index) =>
+        <button 
+        className='div__div--buttonNumber'
+        onClick={() => pagesOfNumber(number)} key={index}>
           {number}
-        </button>)} */}
+        </button>)}
+      </div>
+
 
       {/* PokemonsPerPage */}
       {pokemonsPaginatedButton}
