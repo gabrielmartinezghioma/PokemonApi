@@ -186,7 +186,7 @@
 }
 
 .li--pokemonCard:hover {
-  transform: scale(105%);
+  transform: scale(110%);
   transition: transform 0.5s;
 }
 
@@ -255,7 +255,7 @@
 /* /// */
 .article__div--h2cardPokedex {
   color:var(--color-secondary);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1%;
   text-align: center;

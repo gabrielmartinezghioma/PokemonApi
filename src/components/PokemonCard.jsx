@@ -20,7 +20,8 @@ const PokemonCard = ({ url }) => {
           ?
           isError === false
             ?
-            <li data-aos="fade-up"
+            <li 
+            data-aos="fade-up"
             data-aos-delay="400"
              className="li--pokemonCard">
               <Link to={`/pokedex/${data.id}`}>

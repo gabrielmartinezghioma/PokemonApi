@@ -164,6 +164,7 @@ transition: all 1s;
   justify-content: center;
   align-items: center;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .div__div--buttonPaginated:active{
@@ -180,6 +181,7 @@ transition: all 1s;
 
 .div__div--buttonNumber:hover{
   color: var(--color-secondary);
+  cursor: pointer;
 }
 
 .div__div--paginatedNumbers{
