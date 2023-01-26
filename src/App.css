@@ -99,16 +99,19 @@ body {
 
 .div__selectionPerPage{
   display: flex;
-  position: absolute;
-  bottom: 20%;
-  left: 20px;
-  position: fixed;
+  justify-content: end;
+  align-items: center;
   flex-direction: column;
+  position: fixed;
+  bottom: 5%;
+  left: 20px;
+  flex-direction: column;
+  width: 4%;
+  height: auto;
 }
 
 .div__img--selectionPerPage{
-  width: 10%;
-
+  width: 100%;
 }
 
 .div__div--selectionPerPage{
@@ -118,7 +121,8 @@ body {
 
 .div__selectionPerPage:hover 
 .div__img--selectionPerPage{
-  width: 10%;
+  width: -100%;
+  height: 100vh;
   display:none;
 }
 
@@ -127,10 +131,10 @@ body {
   display: block;
 }
 
-
 .div__div--buttonSelectionPerPage{
   display: none;
   border: none;
+  color: var(--color--quarter);
   background-color: var(--color--third);
   border-radius: 50%;
   font-size: 1,5rem;
