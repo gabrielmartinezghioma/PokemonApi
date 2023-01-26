@@ -41,8 +41,8 @@ const TypesPokemonsSelected = () => {
   const buttonIncrementDecrease =
     <ButtonIncrementDecrease
       setPage={setPage}
-      textPrev={<i class='bx bxs-skip-previous-circle' ></i>}
-      textNext={<i class='bx bxs-skip-next-circle'></i>}
+      textPrev={<i className='bx bxs-skip-previous-circle' ></i>}
+      textNext={<i className='bx bxs-skip-next-circle'></i>}
       totalPages={totalPages}
       pagesNumbers={pagesNumbers}
       setPokemonsPerPage={setPokemonsPerPage}
@@ -80,8 +80,8 @@ const TypesPokemonsSelected = () => {
   const buttonIncrementDecreaseType =
     <ButtonIncrementDecrease
       setPage={setPageType}
-      textPrev={<i class='bx bxs-skip-previous-circle' ></i>}
-      textNext={<i class='bx bxs-skip-next-circle'></i>}
+      textPrev={<i className='bx bxs-skip-previous-circle' ></i>}
+      textNext={<i className='bx bxs-skip-next-circle'></i>}
       totalPages={totalPagesTypes}
       pagesNumbers={PagesNumbresTypes}
       setPokemonsPerPage={setPokemonsPerPageType}
