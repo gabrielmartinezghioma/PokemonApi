@@ -11,14 +11,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: var(--color-prymary);
-  border-radius: 2rem;
-  position: absolute;
-  z-index: 2;
-  top: -20vh;
-  left: -5vw;
+  position: fixed;
+  z-index: 1;
+  top: 15vh;
 }
 
 .div__img--isLoading {
