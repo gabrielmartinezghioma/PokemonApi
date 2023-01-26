@@ -44,126 +44,136 @@ const PokedexId = () => {
               </article>
 
               <button className='section__button' onClick={() => navigatePokedex()}>
-                <i className='bx bx-arrow-back bx-fade-left bx-flashing-hover'></i></button>
+                <i className='bx bx-arrow-back bx-fade-left bx-flashing-hover'></i>
+              </button>
 
               <article className='section__article--pokedexId'>
+
                 <article className='article__article--pokedexId' >
-                  <img className='article__article--imgPokedexId' src={data.sprites?.other?.['official-artwork']?.front_default ? data.sprites?.other?.['official-artwork']?.front_default : 'pokeball.png' } alt={`${data?.name}`} />
-
-                  <div className='article__article--divPokedexId'>
-                    <div className='article__div--NamePokedexId'>
-                      <h2 className='div__h2--idPokedexId'># {id}</h2>
-                      <h2 className='div__h2--NamePokedexId'>{String(name)}</h2>
-                    </div>
-
-                    <div className='article__div--descriptionPokedexId'>
-
-                      <div className='article__div--divDescriptionPokedexId'>
-                        <h4 className='div__h4--descriptionPokedexId'>Altura </h4>
-                        <h4 className='div__h4--descriptionData'>{data?.height}</h4>
-                      </div>
-
-                      <div className='article__div--divDescriptionPokedexId'>
-                        <h4 className='div__h4--descriptionPokedexId'>Peso </h4>
-                        <h4 className='div__h4--descriptionData'>{data?.weight}</h4>
-                      </div>
-                    </div>
+                  <div className='article__div--pokedexId'>
+                    <img className='article__div--imgPokedexId'
+                      src={data.sprites?.other?.['official-artwork']?.front_default ? data.sprites?.other?.['official-artwork']?.front_default : 'pokeball.png'} alt={`${data?.name}`}
+                    />
                   </div>
 
-                  <article className='section__article--typePokedexId'>
-                    <div className='article__div--typePokedexId'>
-                      <h3 className='div__h3--typePokedexId' >Tipo</h3>
-                      <ul className='div__ul--typePokedexId'>
+                  <article className='article__article--contentPokedexId'>
+                    <div className='article__article--divPokedexId'>
+                      <div className='article__div--NamePokedexId'>
+                        <h2 className='div__h2--idPokedexId'># {id}</h2>
+                        <h2 className='div__h2--NamePokedexId'>{String(name)}</h2>
+                      </div>
 
-                        {data?.types?.map((object, index) => {
-                          if (index < 2) {
-                            const { upperCaseString } = upperCase(object?.type?.name);
-                            return (
-                              <li key={index} className='ul__li--typePokedexId'>
-                                {upperCaseString}
-                              </li>
-                            )
-                          }}
-                        )}
+                      <div className='article__div--descriptionPokedexId'>
 
+                        <div className='article__div--divDescriptionPokedexId'>
+                          <h4 className='div__h4--descriptionPokedexId'>Altura </h4>
+                          <h4 className='div__h4--descriptionData'>{data?.height}</h4>
+                        </div>
 
-                      </ul>
+                        <div className='article__div--divDescriptionPokedexId'>
+                          <h4 className='div__h4--descriptionPokedexId'>Peso </h4>
+                          <h4 className='div__h4--descriptionData'>{data?.weight}</h4>
+                        </div>
+                      </div>
                     </div>
 
-                    <div className='article__div--typePokedexId'>
-                      <h3 className='div__h3--typePokedexId'>Habilidades</h3>
-                      <ul className='div__ul--typePokedexId'>
-                        {data?.abilities?.map((object,index)=>{
-                          if(index<2){
-                            const { upperCaseString } = upperCase(object?.ability?.name);
-                            return(
-                              <li key={index} className='ul__li--typePokedexId'>{upperCaseString}</li>
-                            )
+                    <article className='section__article--typePokedexId'>
+                      <div className='article__div--typePokedexId'>
+                        <h3 className='div__h3--typePokedexId' >Tipo</h3>
+                        <ul className='div__ul--typePokedexId'>
+
+                          {data?.types?.map((object, index) => {
+                            if (index < 2) {
+                              const { upperCaseString } = upperCase(object?.type?.name);
+                              return (
+                                <li key={index} className='ul__li--typePokedexId'>
+                                  {upperCaseString}
+                                </li>
+                              )
+                            }
                           }
-                        })}
-                        
-                      </ul>
-                    </div>
-                  </article>
+                          )}
 
-                  <article className='section__article--statsPokedexId'>
-                    <h2 className='article__h2--statsPokedexId'>Stats</h2>
 
-                    <div className='article__div--statsPokedexId'>
-                      <div className='div__div--statsPokedexId'>
-                        <h3>HP:</h3>
-                        <h3> {data?.stats?.[0]?.base_stat}/100</h3>
+                        </ul>
                       </div>
-                      <div className='div__div--statsProgressPokedexId'>
-                        <div
-                          className='div__div--divstatsProgress'
-                          style={{ width: `${data?.stats?.[0]?.base_stat}%` }}
-                        >
+
+                      <div className='article__div--typePokedexId'>
+                        <h3 className='div__h3--typePokedexId'>Habilidades</h3>
+                        <ul className='div__ul--typePokedexId'>
+                          {data?.abilities?.map((object, index) => {
+                            if (index < 2) {
+                              const { upperCaseString } = upperCase(object?.ability?.name);
+                              return (
+                                <li key={index} className='ul__li--typePokedexId'>{upperCaseString}</li>
+                              )
+                            }
+                          })}
+
+                        </ul>
+                      </div>
+                    </article>
+
+                    <article className='section__article--statsPokedexId'>
+                      <h2 className='article__h2--statsPokedexId'>Stats</h2>
+
+                      <div className='article__div--statsPokedexId'>
+                        <div className='div__div--statsPokedexId'>
+                          <h3>HP:</h3>
+                          <h3> {data?.stats?.[0]?.base_stat}/100</h3>
+                        </div>
+                        <div className='div__div--statsProgressPokedexId'>
+                          <div
+                            className='div__div--divstatsProgress'
+                            style={data?.stats?.[0]?.base_stat >= 100 ? { width: '100%' } : { width: `${data?.stats?.[0]?.base_stat}%` }}
+                          >
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className='article__div--statsPokedexId'>
-                      <div className='div__div--statsPokedexId'>
-                        <h3>Ataque: </h3>
-                        <h3>{data?.stats?.[1]?.base_stat}/100</h3>
-                      </div>
-                      <div className='div__div--statsProgressPokedexId'>
-                        <div
-                          className='div__div--divstatsProgress'
-                          style={{ width: `${data?.stats?.[1]?.base_stat}%` }}
-                        >
+                      <div className='article__div--statsPokedexId'>
+                        <div className='div__div--statsPokedexId'>
+                          <h3>Ataque: </h3>
+                          <h3>{data?.stats?.[1]?.base_stat}/100</h3>
+                        </div>
+                        <div className='div__div--statsProgressPokedexId'>
+                          <div
+                            className='div__div--divstatsProgress'
+
+                            style={data?.stats?.[1]?.base_stat >= 100 ? { width: '100%' } : { width: `${data?.stats?.[1]?.base_stat}%` }}
+                          >
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className='article__div--statsPokedexId'>
-                      <div className='div__div--statsPokedexId'>
-                        <h3>Defensa: </h3>
-                        <h3>{data?.stats?.[2]?.base_stat}/100</h3>
-                      </div>
+                      <div className='article__div--statsPokedexId'>
+                        <div className='div__div--statsPokedexId'>
+                          <h3>Defensa: </h3>
+                          <h3>{data?.stats?.[2]?.base_stat}/100</h3>
+                        </div>
 
-                      <div className='div__div--statsProgressPokedexId'>
-                        <div
-                          className='div__div--divstatsProgress'
-                          style={{ width: `${data?.stats?.[2]?.base_stat}%` }}
-                        ></div>
-                      </div>
-                    </div>
-
-                    <div className='article__div--statsPokedexId'>
-                      <div className='div__div--statsPokedexId'>
-                        <h3>Velocidad: </h3>
-                        <h3>{data?.stats?.[5]?.base_stat}/100</h3>
-                      </div>
-                      <div className='div__div--statsProgressPokedexId'>
-                        <div
-                          className='div__div--divstatsProgress'
-                          style={{ width: `${data?.stats?.[5]?.base_stat}%` }}
-                        >
+                        <div className='div__div--statsProgressPokedexId'>
+                          <div
+                            className='div__div--divstatsProgress'
+                            style={data?.stats?.[2]?.base_stat >= 100 ? { width: '100%' } : { width: `${data?.stats?.[2]?.base_stat}%` }}
+                          ></div>
                         </div>
                       </div>
-                    </div>
+
+                      <div className='article__div--statsPokedexId'>
+                        <div className='div__div--statsPokedexId'>
+                          <h3>Velocidad: </h3>
+                          <h3>{data?.stats?.[5]?.base_stat}/100</h3>
+                        </div>
+                        <div className='div__div--statsProgressPokedexId'>
+                          <div
+                            className='div__div--divstatsProgress'
+                            style={data?.stats?.[5]?.base_stat >= 100 ? { width: '100%' } : { width: `${data?.stats?.[5]?.base_stat}%` }}
+                          >
+                          </div>
+                        </div>
+                      </div>
+                    </article>
                   </article>
 
                 </article>
