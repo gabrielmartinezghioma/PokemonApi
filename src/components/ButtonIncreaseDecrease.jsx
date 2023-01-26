@@ -33,7 +33,7 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
       <div className='div__div--paginated'>
         {/* Decrease */}
         <button
-        className='div__div--buttonPaginated'
+        className={numberPage === 1 ? 'div__div--buttonPaginatedDisabled' :'div__div--buttonPaginated' }
           onClick={() => (functionPagesPrev())}
           disabled={numberPage === 1}
         >
@@ -42,7 +42,7 @@ const ButtonIncrementDecrease = ({ setPage, textPrev, textNext, totalPages, page
 
         {/* Increse */}
         <button
-         className='div__div--buttonPaginated'
+         className={totalPages === numberPage ? 'div__div--buttonPaginatedDisabled' :'div__div--buttonPaginated' }
           onClick={() => (functionPagesNext())}
           disabled={totalPages === numberPage}
         >

@@ -169,6 +169,12 @@ transition: all 1s;
   align-items: center;
   transition: all 1s;
   cursor: pointer;
+  color: var(--color-prymary);
+}
+
+.div__div--buttonPaginatedDisabled{
+visibility: hidden;
+
 }
 
 .div__div--buttonPaginated:active{
@@ -189,15 +195,26 @@ transition: all 1s;
 }
 
 .div__div--paginatedNumbers{
-  background-color: transparent;
   border: none;
   display: flex;
-  width: 30%;
+  width: 15%;
   position: absolute;
   overflow: hidden;
-  justify-content: center;
- 
+  justify-content: flex-start;
 }
 
+
+.div__div--paginatedNumbers:hover{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 80px;
+  position: absolute;
+  overflow: hidden;
+  background-color: var(--color-prymary);
+  overflow-y: auto;
+  
+}
 
 
