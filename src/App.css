@@ -189,6 +189,7 @@ transition: all 1s;
   width: 30%;
   position: absolute;
   overflow: hidden;
+  justify-content: center;
  
 }
 
