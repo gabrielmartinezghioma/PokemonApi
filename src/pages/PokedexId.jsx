@@ -48,7 +48,7 @@ const PokedexId = () => {
 
               <article className='section__article--pokedexId'>
                 <article className='article__article--pokedexId' >
-                  <img className='article__article--imgPokedexId' src={data.sprites?.other?.['official-artwork']?.front_default} alt={`${data?.name}`} />
+                  <img className='article__article--imgPokedexId' src={data.sprites?.other?.['official-artwork']?.front_default ? data.sprites?.other?.['official-artwork']?.front_default : 'pokeball.png' } alt={`${data?.name}`} />
 
                   <div className='article__article--divPokedexId'>
                     <div className='article__div--NamePokedexId'>
