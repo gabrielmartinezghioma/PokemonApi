@@ -59,7 +59,7 @@
 .section__div {
   margin: 10% 6.5vw;
   max-width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 
@@ -76,9 +76,8 @@
 
 .section__article--bodyPokedex {
   width: 100%;
-  position: absolute;
-  margin-top: 2%;
-  z-index: 1;
+  position: relative;
+  margin-top: 0%;
 }
 
 /* search component */
@@ -127,8 +126,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  position: absolute;
-  top: -3.4vh;
+  position: relative; 
 }
 
 .div__select--pokemons {

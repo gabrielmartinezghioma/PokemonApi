@@ -60,7 +60,6 @@ const Pokedex = () => {
 
         <article className='section__article--NavPokedex'>
           <h2 className='section__article--h2Pokedex'><span className='section__article--h2SpanPokedex'>Bienvenido {`${name}`}</span>, aquí puedes encontrar tu pokemon favorito </h2>
-
         </article>
 
         <article className='section__article--bodyPokedex'>

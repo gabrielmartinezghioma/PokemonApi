@@ -14,18 +14,18 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--color-prymary);
-  border-radius:2rem ;
+  border-radius: 2rem;
   position: absolute;
   z-index: 2;
   top: -20vh;
   left: -5vw;
 }
 
-.div__img--isLoading{
+.div__img--isLoading {
   width: 400px;
 }
 
-.div__h2--isLoading{
+.div__h2--isLoading {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 5%;
@@ -39,7 +39,7 @@ body {
   }
 }
 
-.div--isError{
+.div--isError {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,10 +48,10 @@ body {
   width: 100%;
   height: 80vh;
   background-color: var(--color-prymary);
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
-.div__div--isError{
+.div__div--isError {
   width: 100%;
   height: 30%;
   display: flex;
@@ -59,16 +59,17 @@ body {
   align-items: center;
 }
 
-.div__div--imgIsError{
+.div__div--imgIsError {
   width: 9rem;
 }
-.div__div--h2IsError{
+
+.div__div--h2IsError {
   font-size: 10rem;
   font-weight: 600;
   margin: 1%;
 }
 
-.div__h2--isError{
+.div__h2--isError {
   font-size: 1.5rem;
   color: var(--color--text);
   margin-top: 5%;
@@ -76,13 +77,14 @@ body {
 
 /* ButtonIncreaseDecrease */
 
-.div__div--divPokemons, .div--paginated{
+.div__div--divPokemons,
+.div--paginated {
   display: flex;
   width: 100%;
   margin: 2% 0;
 }
 
-.div__div--paginated{
+.div__div--paginated {
   display: flex;
   justify-content: space-between;
   width: 40%;
@@ -91,13 +93,13 @@ body {
 
 /* selection per Page */
 
-.div--paginated{
+.div--paginated {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.div__selectionPerPage{
+.div__selectionPerPage {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -110,34 +112,32 @@ body {
   height: auto;
 }
 
-.div__img--selectionPerPage{
+.div__img--selectionPerPage {
   width: 100%;
 }
 
-.div__div--selectionPerPage{
+.div__div--selectionPerPage {
   display: none;
   transition: all 1s;
 }
 
-.div__selectionPerPage:hover 
-.div__img--selectionPerPage{
+.div__selectionPerPage:hover .div__img--selectionPerPage {
   width: -100%;
   height: 100vh;
-  display:none;
+  display: none;
 }
 
-.div__selectionPerPage:hover 
-.div__div--selectionPerPage{
+.div__selectionPerPage:hover .div__div--selectionPerPage {
   display: block;
 }
 
-.div__div--buttonSelectionPerPage{
+.div__div--buttonSelectionPerPage {
   display: none;
   border: none;
   color: var(--color--quarter);
   background-color: var(--color--third);
   border-radius: 50%;
-  font-size: 1,5rem;
+  font-size: 1, 5rem;
   padding: 1rem;
   width: 1rem;
   height: 1rem;
@@ -148,15 +148,15 @@ body {
   margin: 5%;
 }
 
-.div__div--buttonSelectionPerPage:hover{
-cursor: pointer;
-background-color: var(--color-secondary);
-transform: scale(110%);
-transition: all 1s;
+.div__div--buttonSelectionPerPage:hover {
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  transform: scale(110%);
+  transition: all 1s;
 }
 
-.div__div--buttonPaginated{
-  background-color: var( --color-secondary);
+.div__div--buttonPaginated {
+  background-color: var(--color-secondary);
   width: 3rem;
   height: 3rem;
   font-size: 1.8rem;
@@ -172,29 +172,29 @@ transition: all 1s;
   color: var(--color-prymary);
 }
 
-.div__div--buttonPaginatedDisabled{
-visibility: hidden;
+.div__div--buttonPaginatedDisabled {
+  visibility: hidden;
 
 }
 
-.div__div--buttonPaginated:active{
+.div__div--buttonPaginated:active {
   opacity: 0.2;
   transform: scale(90%);
   transition: all 1s;
 }
 
-.div__div--buttonNumber{
+.div__div--buttonNumber {
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
 }
 
-.div__div--buttonNumber:hover{
+.div__div--buttonNumber:hover {
   color: var(--color-secondary);
   cursor: pointer;
 }
 
-.div__div--paginatedNumbers{
+.div__div--paginatedNumbers {
   border: none;
   display: flex;
   width: 15%;
@@ -204,7 +204,7 @@ visibility: hidden;
 }
 
 
-.div__div--paginatedNumbers:hover{
+.div__div--paginatedNumbers:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -214,7 +214,5 @@ visibility: hidden;
   overflow: hidden;
   background-color: var(--color-prymary);
   overflow-y: auto;
-  
+
 }
-
-
