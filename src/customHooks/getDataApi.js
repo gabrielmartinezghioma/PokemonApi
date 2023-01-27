@@ -22,7 +22,9 @@ function getDataApi(url,body,numberOfPages) {
       setIsError(true);
 
     } finally {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000)
     }
   }
 

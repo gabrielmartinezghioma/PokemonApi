@@ -21,8 +21,8 @@ const PokedexId = () => {
 
   const { upperCaseString: name } = upperCase(data?.name)
 
-  const { loading } = <Loading />
-  const { error } = <Error404 />
+  const  loading = <Loading />
+  const error  = <Error404 />
 
 
   return (

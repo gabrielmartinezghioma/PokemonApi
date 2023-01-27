@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function getDataApiDirect(url,isBoolean, number) {
+function getDataApiDirect(url, isBoolean, number) {
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +14,7 @@ function getDataApiDirect(url,isBoolean, number) {
     try {
       const response = await axios.get(url);
 
-      if (response.status === 200 ) {
+      if (response.status === 200) {
         setData(response.data);
         setIsError(false);
         setPage(number)
@@ -25,13 +25,15 @@ function getDataApiDirect(url,isBoolean, number) {
       setIsError(true);
 
     } finally {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000)
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     dataApi();
-  },[isBoolean])
+  }, [isBoolean])
 
   return {
     //getDataApi
