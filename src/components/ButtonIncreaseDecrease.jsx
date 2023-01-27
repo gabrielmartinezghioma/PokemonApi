@@ -14,9 +14,6 @@ const ButtonIncrementDecrease = ({ setPage,totalPages, setPokemonsPerPage }) => 
     setPage(Number(value));
   }
 
-
-  console.log(totalPages);
-
   return (
     <div className='div--paginated'>
      
@@ -25,7 +22,7 @@ const ButtonIncrementDecrease = ({ setPage,totalPages, setPokemonsPerPage }) => 
 
      {/* Paginated */}
       <Pagination count={totalPages}   onChange={pagesOfNumber} variant="outlined" shape="rounded" 
-      className='div__pagination'
+      color="primary"
       
       />
 

@@ -83,12 +83,6 @@ body {
   margin: 2% 0;
 }
 
-.div__div--paginated {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-}
-
 
 /* selection per Page */
 
