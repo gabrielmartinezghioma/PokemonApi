@@ -36,15 +36,12 @@ const TypesPokemonsSelected = () => {
   const pokemonsAll = data?.results;
 
   // Paginated Prev & Next 
-  const { setPage, pokemonsPaginated, totalPages, pagesNumbers, setPokemonsPerPage } = paginated(pokemonsAll);
+  const { setPage, pokemonsPaginated, totalPages, setPokemonsPerPage } = paginated(pokemonsAll);
 
   const buttonIncrementDecrease =
     <ButtonIncrementDecrease
       setPage={setPage}
-      textPrev={<i className='bx bxs-skip-previous-circle' ></i>}
-      textNext={<i className='bx bxs-skip-next-circle'></i>}
       totalPages={totalPages}
-      pagesNumbers={pagesNumbers}
       setPokemonsPerPage={setPokemonsPerPage}
     />
 
@@ -60,16 +57,17 @@ const TypesPokemonsSelected = () => {
   const pokemonsTypes = types?.results;
 
   const typesPokemons = pokemonsTypes?.map((object, index) => {
-    if(index<18){
-      return<option
+    if (index < 18) {
+      return <option
         key={index}
         id="select"
         value={`${object.url}`}
       >
         {object.name.toUpperCase()}
-      </option>}
-    })
-  
+      </option>
+    }
+  })
+
   const { data: typesSelected } = getDataApiDirect(urlType, isBooleanType);
 
   const pokemonsTypesSelected = typesSelected?.pokemon;
